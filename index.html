@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //sum of odd numbers greater than 1420 and less than 1515
+
+      var num1 = 1421;
+      var num2 = 1515;
+      var sum = 0;
+      for (var i = num1; i < num2; i++) {
+        if (i % 2 !== 0) {
+          sum = sum + i;
+        }
+      }
+      console.log(sum);
+
+      //sum of numbers in an array of numbers
+      function sumOfNum(arr) {
+        return arr.reduce((acc, curr) => {
+          return acc + curr;
+        });
+      }
+      console.log(sumOfNum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+      //create a function that recieves an array of numbers and return an array of positive numbers
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const positiveNum = numbers.filter((num) => {
+        if (num % 2 == 0) {
+          return num;
+        }
+      });
+      console.log(positiveNum);
+
+      //create a function that will merge two arrays and return the result as a new array.
+      function combArray(arr1, arr2) {
+        let twoarr = [...arr1, ...arr2];
+        return twoarr;
+      }
+      console.log(combArray([1, 2, 3, 4, 5], [6, 7, 8, 9, 10]));
+    </script>
+  </body>
+</html>
